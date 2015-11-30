@@ -26,10 +26,24 @@ Route::get('/home',[
     'uses' => 'TODOController@index'
 ]);
 
+Route::post('/addListe','TODOController@addListe');
 
 
 
+Route::get('/deleteListe/{name_liste}',[
+    'as'=>'deleteListe',
+    'uses'=>'TODOController@deleteListe'
+]);
 
+Route::post('/addTask/{name_liste}',[
+    'as'=>'addTask',
+    'uses'=>'TODOController@addTask'
+]);
+
+Route::get('/deleteTache/{name_liste}/{tache}',[
+    'as'=>'deleteTask',
+    'uses'=>'TODOController@deleteTask'
+]);
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
