@@ -1,0 +1,62 @@
+#conteneur{
+
+    border-color: #204d74;
+    border-style: solid;
+    padding: 50px;
+    width : 50%;
+    margin : auto;
+    margin-top : 50px;
+
+
+}
+
+#liste
+{
+
+    width : 50%;
+    margin : auto;
+    margin-top : 50px;
+    height: 300px
+
+
+
+}
+
+#nom_liste
+{
+    margin : auto;
+    color:darkgreen;
+    font-size: 30px;
+
+
+
+}
+
+.mod
+{
+
+    margin-left: 20px;
+    margin-top :10px;
+    margin-bottom: 10px;
+
+}
+
+#btn_up
+{
+
+    margin-left: 20px;
+    margin-top :10px;
+    margin-bottom: 10px;
+
+
+}
+
+#nom_tache
+{
+
+    margin:10px 10px 10px 10px;
+    font-size: 15px;
+
+
+
+}

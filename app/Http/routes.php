@@ -16,6 +16,11 @@ Route::get('/',[
     'uses' => 'TODOController@index'
 ]);
 
+Route::get('/about',[
+    'as' => 'about',
+    'uses' => 'TODOController@about'
+]);
+
 Route::get('/inscription',[
     'as' => 'inscription',
     'uses' => 'TODOController@inscription'
@@ -43,6 +48,24 @@ Route::post('/addTask/{name_liste}',[
 Route::get('/deleteTache/{name_liste}/{tache}',[
     'as'=>'deleteTask',
     'uses'=>'TODOController@deleteTask'
+]);
+
+
+Route::get('/valideTask/{name_liste}/{tache}',[
+    'as'=>'valideTask',
+    'uses'=>'TODOController@valideTask'
+]);
+
+
+
+Route::post('/editTask/{name_liste}/{tache}',[
+    'as'=>'editTask',
+    'uses'=>'TODOController@editTask'
+]);
+
+Route::post('/editList/{name_liste}',[
+    'as'=>'editList',
+    'uses'=>'TODOController@editList'
 ]);
 
 // Authentication routes...

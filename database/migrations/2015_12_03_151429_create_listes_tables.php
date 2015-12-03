@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTacheTable extends Migration
+class CreateListesTables extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,14 @@ class CreateTacheTable extends Migration
      */
     public function up()
     {
-        Schema::create('taches', function (Blueprint $table) {
+        Schema::create('listes', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('name_user');
             $table->string('name_liste');
-            $table->string('etat_tache');
-            $table->string('tache');
-            $table->date('date');
+            $table->text('description_liste');
+            $table->integer('tache_acc');
+            $table->integer('tache_tot');
             $table->timestamps();
-
         });
     }
 
@@ -30,6 +30,6 @@ class CreateTacheTable extends Migration
      */
     public function down()
     {
-        Schema::drop('taches');
+        Schema::drop('listes');
     }
 }
